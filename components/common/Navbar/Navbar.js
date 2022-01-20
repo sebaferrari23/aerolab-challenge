@@ -1,6 +1,6 @@
 import { Nav } from "./styled";
-import LogoAerolab from "../../assets/svg/logo-aerolab.svg";
-import Container from "../Container";
+import LogoAerolab from "../../../assets/svg/logo-aerolab.svg";
+import { Container } from "../../ui";
 
 const Navbar = () => {
   return (

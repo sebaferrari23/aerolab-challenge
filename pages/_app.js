@@ -1,28 +1,12 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { normalize } from "styled-normalize";
-import Layout from "../components/Layout";
+import { ThemeProvider } from "styled-components";
+import { Layout } from "../components/common";
+import { GlobalStyle, Theme } from "../styles";
 
-const GlobalStyle = createGlobalStyle`
-  ${normalize}
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,600&display=swap');
-`;
-
-const theme = {
-  colors: {
-    primary: "#176FEB",
-    secondary: "#FF80FF",
-    background: "#FFF",
-  },
-  fonts: {
-    primary: "Montserrat, sans-serif",
-  },
-};
-
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={Theme}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
@@ -30,3 +14,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default App;
