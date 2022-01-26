@@ -5,8 +5,8 @@ import { ProductsListStyled } from './styled'
 const ProductsList = ({ list, columns }) => {
   return (
     <ProductsListStyled columns={columns}>
-      {list.map((product) => (
-        <ProductCard product={product} key={product.id}/>
+      {list && list.map((product) => (
+        <ProductCard product={product} key={product._id} />
       ))}
     </ProductsListStyled>
   )

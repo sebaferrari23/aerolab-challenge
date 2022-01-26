@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import normalize from "styled-normalize";
+import Theme from "./theme";
 
 const GlobalStyle = createGlobalStyle`
   // Import normalize
@@ -29,7 +30,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding-top: 8rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${Theme.fonts.main};
+    color: ${Theme.colors.darkGray};
   }
 
 `;

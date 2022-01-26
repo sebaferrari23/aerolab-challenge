@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const ButtonWrapper = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: ${({ theme }) => theme.gradients.primary};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.boxShadow};
