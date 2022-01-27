@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { Hero } from "../components/common";
 import { ProductsSection, ProductsList } from "../components/product";
-import { Heading } from "../components/ui";
+import { Container, Heading } from "../components/ui";
 import { getProducts } from "../utils/api";
 
 export const Home = ({ products }) => {
@@ -11,29 +12,25 @@ export const Home = ({ products }) => {
         <meta name="description" content="Aerolab Challenge" />
       </Head>
 
-      <Heading
-        level={1}
-        uppercase={true}
-        strongGradient={true}
-      >
-        <strong>Tech</strong> Zone
-      </Heading>
+      <Hero />
 
       <ProductsSection>
-        <Heading
-          level={2}
-          uppercase={true}
-          strongGradient={true}
-        >
-          <strong>Tech</strong> Products
-        </Heading>
+        <Container>
+          <Heading
+            level={2}
+            uppercase={true}
+            strongGradient={true}
+          >
+            <strong>Tech</strong> Products
+          </Heading>
 
-        { products && products.length > 0 ? (
-          <ProductsList list={products} columns={4} />
-        ) : (
-          <p>No products</p>
-        )
-        }
+          { products && products.length > 0 ? (
+            <ProductsList list={products} columns={4} />
+          ) : (
+            <p>No products</p>
+          )
+          }
+        </Container>
       </ProductsSection>
     </>
   );

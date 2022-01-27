@@ -9,10 +9,11 @@ export const ButtonWrapper = styled.button`
   box-shadow: ${({ theme }) => theme.boxShadow};
   color: ${({ theme }) => theme.colors.white};
   padding: 0 2.5rem;
-  height: 3.75rem;
   font-size: 1.125rem;
   font-weight: 600;
   width: ${props => props.fluid ? '100%' : 'auto'};
+  height: ${props => props.cta ? '5rem' : '3.75rem'};
+  text-transform: ${props => props.cta ? 'uppercase' : 'none'};
   cursor: pointer;
   &:hover {
     background: ${({ theme }) => theme.gradients.secondary};

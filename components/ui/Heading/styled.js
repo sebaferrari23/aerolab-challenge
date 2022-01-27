@@ -29,5 +29,6 @@ export const HeadingStyled = styled.div`
   color: ${({ theme }) => theme.colors.darkGray};
   font-weight: 900;
   line-height: ${props => props.level < 3 && '80%'};
+  ${props => props.customStyles && props.customStyles};
   ${props => props.strongGradient && ( ({ theme }) => handleFontGradient(theme.gradients.primary) ) }
 `;
