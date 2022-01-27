@@ -29,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    padding-top: 8rem;
     font-family: ${Theme.fonts.main};
     color: ${Theme.colors.darkGray};
   }
